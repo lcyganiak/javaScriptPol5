@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZDJSpol5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Podział tag HTML na grupy </h1>
+    <h2>Elementy blokowe </h2>
+
+
+    <nav >
+        <ul>
+            <li class="nav-li" id="nav-li-home"><a href="#"> Home</a></li>
+            <li class="nav-li"><a href="#"> O mnie</a></li>
+            <li class="nav-li"><a href="#">Moje projekty</a></li>
+            <li class="nav-li"><a href="#">kontakt</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div>
+            tło tego elementu będzie zdjęciem
+        </div>
+    </header>
+    <main>
+        <section>
+            <article> Ciekawostka 1</article>
+            <article>Ciekawostka 2</article>
+        </section>
+        <section>
+            <article>Opis projeku skrócony 1 </article>
+            <article>Opis projeku skrócony 2</article>
+        </section>
+
+    </main>
+
+
+    <aside>
+        to bedzie z lewej strony naszej aplikacji
+    </aside>
+    <footer>
+
+        <p>link do każdej z pod stron <span>Ale z dodatkowym opisem</span></p>
+    </footer>
+
+
+    <h2>Elementy liniowe </h2>
+    <span>
+        Lorem.//////
+    </span>
+    <span>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima numquam earum, deleniti pariatur error officiis
+        doloremque soluta a natus hic alias ipsum, deserunt sapiente dicta porro esse, odio quibusdam voluptatum?
+    </span>
+    <button>Add</button>
+    <a href="http://"> WP</a>
+    <input type="text" name="" id="">
+    <img src="" alt="">
+    <h2>
+        Formularz kontaktowy
+
+    </h2>
+    <!-- placeholder to podpowiedzi dla uzytkownia co ma być wpisane -->
+    <!-- value wartośc wpisan bądź pobrana z bazy danych  -->
+    <!-- step wartoś o jaką możemy zwiększyć lub zmnijszyć wartośc w input type number -->
+    <div>
+
+        <label for="your_name"> Twoje imię: </label>
+        <input type="text" id="your_name" placeholder="Wpisz swoje imię" value="Jan" readonly>
+        <br>
+        <label for="number">WArtość liczbowa</label>
+        <input type="number" name="" id="number" step="10" max="40" required>
+        <br>
+        <label for="birthday">Data urodzin</label>
+        <input type="date" name="" id="birthday" min="2022-01-01">
+        <br>
+        <label for="password">Hasło</label>
+        <input type="password" name="" id="password" minlength="3" maxlength="5">
+        <br>
+        <label for="file">Dodaj załacznik</label>
+        <input type="file" name="" id="file">
+        <br>
+        <!--         
+            <fieldset>to ramka wokół inputów 
+            legend to opis na ramce 
+        -->
+        <fieldset>
+            <legend> Wybór sosów </legend>
+            <label for="sos1">Sos pomidorowy</label>
+            <input type="checkbox" name="" id="sos1">
+            <br>
+            <label for="sos2">sos czosnkowy</label>
+            <input type="checkbox" name="" id="sos2">
+        </fieldset>
+
+        <fieldset>
+            <legend>Wybór prawo czy lewo</legend>
+            <label for="left">W lewo</label>
+            <input type="radio" name="direction" id="left">
+            <br>
+            <label for="rigth">W prawo</label>
+            <input type="radio" name="direction" id="rigth">
+
+        </fieldset>
+
+        <br>
+        <label for="text">Wiadomośc do :</label>
+        <textarea name="" id="" cols="10" rows="10"></textarea>
+
+    </div>
+    <label for="size">Rozmiar koszulek</label>
+    <select id="size">
+        <option value="empty"> ----- </option>
+        <option value="xs">  XS </option>
+        <option value="s">  S </option>
+        <option value="m">  M </option>
+        <option value="l">  L </option>
+        <option value="xl">  XL </option>
+    </select>
+    <label for="year">Miesiace</label>
+    <select name="" id="year">
+        <optgroup label="Wiosna">
+            <option value="1">Marzec</option>
+            <option value="2">Maj</option>
+        </optgroup>
+        <optgroup label="Lato">
+            <option value="3">lipiec</option>
+            <option value="4">sierpień</option>
+        </optgroup>
+
+
+    </select>
+<br>
+    <!-- dla prawidłowego działania 
+    label łaczymy z input za pomocą for i id
+    input z datalist łączymy za pomocą list ( input) z id (datalist) -->
+    <label for="auto">Twoje ulubione auto</label>
+    <input type="text" list="listAuto" id="auto">
+    <datalist id="listAuto">
+        <option value="1" >skoda</option>
+        <option value="2">BMW</option>
+        <option value="3">Audi</option>
+        <option value="4">Tesla</option>
+        <option value="5">Fiat</option>
+    </datalist>    
+
+    <div>
+        <!-- <img src="background_image (2).png" alt="miła i radosna pani"> -->
+    </div>
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Od komentuj i zobacz jak działa  -->
+    <!-- <form action="post">
+        <input type="text" name="yourName" id="">
+        <input type="submit" value="send">
+    </form> -->
+</body>
+
+</html>
