@@ -31,7 +31,7 @@ html {
    
 }
 body {
-    margin: 0;
+    /* margin: 0; */
 }
 
 nav {
@@ -132,4 +132,36 @@ nav {
     /* zdjęcie na slack, z opisem działania, przechywytanie.jpg */
 
 
+}
+
+
+/*overflow */
+
+.overflow-ex {
+    height: 200px;
+
+    border: 1px solid red;
+    overflow: auto;
+    /*overflow: auto; w przypadku za dużego el. wewnątrz rodzica spowoduje pojawienie się scrola wewnątrz el. rodzica */
+}
+
+.owerflow-ex--img {
+    height: 200px;
+
+    border: 1px solid red;
+    overflow: hidden;
+     /*overflow: hidden; w przypadku za dużego el. schowa nadliar pod el. rodzica */
+}
+
+
+/*Dziedziczenie*/
+
+.grad-parent {
+    color:brown !important;
+}
+.parent {
+    color:darkgreen
+}
+.child{
+    color: yellowgreen;
 }
