@@ -1,24 +1,54 @@
+/*
+:root - tu tworzymy zminne dla naszych wartości css np. podstawowe kolore 
+tworzenie 
+--nazwa-nasze-zminnej po dwukropku wartość jaką chcemy przypisać
+--primary-color-font: rgba(10, 10, 10, 0.897);
+
+Użycie
+warość którą chemy zminić np. color po dwukropku podajemy var (--nazwa-naszej-zmiennej)
+color: var(--primary-color-font);
+
+*/
+:root {
+    --primary-color-font: rgba(10, 10, 10, 0.897);
+    --primary-color-font-hover: rgb(255, 0, 0);
+    --font-size: 17px;
+    --font-size-ikon: 20px
+}
+/* text-align: center; w przypadku dodania w tagu html,
+ może spowodować różenie perturbacje w wyglądzie strony */
+html {
+    color: var(--primary-color-font);
+    font-family: 'Lato', sans-serif;
+    /* text-align: center;  */
+    font-size: 17px;
+}
 .nav-li {
     display: inline-block;
     width: 20%;
     text-align: center;
-    font-size: 20px;
     border: 1px solid yellowgreen;
 }
 .nav-li > a {
     text-decoration: none;
+    font-size: 1.2rem;
 }
 .nav-li > a:visited {
     color: black;
 }
 .nav-li > a:hover {
-    color: red;
+    color: var(--primary-color-font-hover);
 }
 
 #nav-li-home > a {
     color: fuchsia;
 }
 
-input[type="password"] {
+.input-block {
     display: block;
+}
+
+.preference{
+    color: red;
+    
 }

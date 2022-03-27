@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZDJSpol5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Podział tag HTML na grupy </h1>
+    <h1>Podział tag <span class="preference">HTML</span>  na grupy </h1>
     <h2>Elementy blokowe </h2>
 
 
@@ -30,7 +33,7 @@
     </header>
     <main>
         <section>
-            <article> Ciekawostka 1</article>
+            <article class="preference" > Ciekawostka 1</article>
             <article>Ciekawostka 2</article>
         </section>
         <section>
@@ -72,19 +75,19 @@
     <div>
 
         <label for="your_name"> Twoje imię: </label>
-        <input type="text" id="your_name" placeholder="Wpisz swoje imię" value="Jan" readonly>
+        <input class="input-block" type="text" id="your_name" placeholder="Wpisz swoje imię" value="Jan" readonly>
         <br>
         <label for="number">WArtość liczbowa</label>
-        <input type="number" name="" id="number" step="10" max="40" required>
+        <input class="input-block" type="number" name="" id="number" step="10" max="40" required>
         <br>
         <label for="birthday">Data urodzin</label>
-        <input type="date" name="" id="birthday" min="2022-01-01">
+        <input class="input-block" type="date" name="" id="birthday" min="2022-01-01">
         <br>
-        <label for="password">Hasło</label>
+        <label class="input-block" for="password">Hasło</label>
         <input type="password" name="" id="password" minlength="3" maxlength="5">
         <br>
         <label for="file">Dodaj załacznik</label>
-        <input type="file" name="" id="file">
+        <input class="input-block" type="file" name="" id="file">
         <br>
         <!--         
             <fieldset>to ramka wokół inputów 
