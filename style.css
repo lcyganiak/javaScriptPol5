@@ -15,32 +15,55 @@ color: var(--primary-color-font);
     --font-size: 17px;
     --font-size-ikon: 20px
 }
+
 /* text-align: center; w przypadku dodania w tagu html,
  może spowodować różenie perturbacje w wyglądzie strony */
 html {
     color: var(--primary-color-font);
     font-family: 'Lato', sans-serif;
     /* text-align: center;  */
-    font-size: 17px;
+    font-size: var(--font-size);
+    font-weight: 400;
+    font-style: normal;
+    /*wartośc domyślna dla wszytkich przeglądarek, nie trzeba ustawiać */
+    line-height: 30px;
+    /*odstęp pomiędzy liniami tekstu*/
+   
 }
+body {
+    margin: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: rgb(113, 113, 149);
+    background: linear-gradient(207deg, rgba(113, 113, 149, 1) 27%, rgba(156, 105, 105, 1) 100%);
+}
+
 .nav-li {
-    display: inline-block;
+    display: inline-block; /*el. ma szerokośc jak tekst w nim się znajdujący, ale możemy manipulować szerokością i wysokością*/
     width: 20%;
     text-align: center;
     border: 1px solid yellowgreen;
-}
-.nav-li > a {
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-.nav-li > a:visited {
-    color: black;
-}
-.nav-li > a:hover {
-    color: var(--primary-color-font-hover);
+    border-radius: 4px;
 }
 
-#nav-li-home > a {
+.nav-li>a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-li>a:visited {
+    color: black;
+}
+
+.nav-li>a:hover {
+    color: var(--primary-color-font-hover);
+    text-decoration: underline;
+}
+
+#nav-li-home>a {
     color: fuchsia;
 }
 
@@ -48,7 +71,65 @@ html {
     display: block;
 }
 
-.preference{
+.preference {
     color: red;
-    
+
+}
+
+.main-header {
+    /* display: none;  */
+    /* display: none;  el. jest schowany nie mam dla niego placeholdera*/
+
+    /* visibility: hidden;  */
+    /* visibility: hidden;   el. jest schowany jest   
+    dla niego placeholdera czyli miejsce jest zarezerwowane*/
+    background-image: url(background_image.png);
+    /*ustawiam zdjęcie jako tło el.*/
+    /* background-size: auto; działanie podstawowe  */
+
+
+    /* background-size: contain;  */
+    /*Gwarantowane zachowanie proporcji obrazu.Obraz jest ustawiony na maksymalny możliwy rozmiar (nie większy niż oryginał), przy którym całkowicie pasuje do elementu.
+    Obraz może nie pokrywać całego tła elementu w pionie lub poziomie, jeśli proporcje bloku i obrazu nie pasują do siebie.*/
+
+
+    background-size: cover;
+    /*Gwarantowane zachowanie proporcji obrazu.
+    Obraz jest ustawiony na minimalny rozmiar, przy którym wypełni tło całego elementu.
+    Jeśli proporcje obrazu i elementu są różne, część obrazu, w pionie lub w poziomie, jest wizualnie obcinana.*/
+    background-position: rigth top;
+    height: 100vh;
+    /*wysokoć na 100 % wysokości przeglądarki*/
+    width: 100%;
+    /*szerokości na 100 % szerokości przeglądarki*/
+    /* border-radius: 50%;  */
+    /* w przypadku el. który jest kwadratem borer-radius : 50% tworzy koło*/
+    position: relative;
+    /*  position: relative;  zamyka cały świat dzieci w rodzcu, 
+    warunk dzieci musza mieć ustawione position: absolute;
+    za pomocą left, right, top, bottom 
+    możemy manipulować odstepami od krawędzi rodzica
+*/
+}
+
+.main-header>div {
+    /* margin: 40px 10px 50px 100px; */
+
+    /* border: 1px dotted red; */
+    /* border-color: red; */
+    border-style: double;
+    border-width: 2px;
+
+    border-left-color: blue;
+    border-right-color: red;
+    position: absolute;
+    /* dziecko jest uzależnione od rodzcia możemy nim manipulować*/
+    left: 50%;
+    /* odsuwamy od lewej krawędzi o 50% całej szerokości el. rodzica*/
+    top: 50%;
+    /* odsuwamy od górnej krawędzi o 50% całej wysokości el. rodzica*/
+    transform: translate(-50%, -50%);
+    /* zdjęcie na slack, z opisem działania, przechywytanie.jpg */
+
+
 }

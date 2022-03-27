@@ -1,0 +1,52 @@
+.parent {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+}
+/*  position: relative;  zamyka cały świat dzieci w rodzcu, 
+    warunk dzieci musza mieć ustawione position: absolute;
+    za pomocą left, right, top, bottom 
+    możemy manipulować odstepami od krawędzi rodzica
+*/
+.item {
+    width: 300px;
+    height: 300px;
+    border: 1px solid yellow;
+    position: absolute;
+}
+.item-1 {
+    background-color: blue;
+    left: 300px;
+}
+.item-2 {
+    background-color: goldenrod;
+    left: 300px;
+    top: 300px;
+}
+.item-3 {
+    background-color: green;
+    top: 300px; /* dokładnie to samo stanie gdzy napisze bottom: 0*/
+}
+.item-4 {
+    background-color: gray;
+}
+
+li {
+    display: inline-block;
+    width: 20%;
+}
+
+nav {
+    position: fixed;
+    background-color: red;
+    z-index: 500;
+}
+
+img {
+    width: 350px;
+    height: auto;
+    float: left; /*opływanie el. przez inne elemnty za stronie*/
+
+    margin: 15px;
+}
